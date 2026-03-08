@@ -52,7 +52,6 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     try {
-      // Use signOut from next-auth/react for client-side logout
       const { signOut } = await import('next-auth/react')
       const result = await signOut({ redirect: false })
       if (result) {
@@ -75,8 +74,10 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
 
           <div className='flex items-center gap-2'>
-            <Image width={50} height={50} alt="brandimage" className='rounded-full' src={brandimage} />
-            <Link href="/" className='text-3xl font-bold'>
+ <div className="bg-[#95BF47] text-black text-2xl w-11 h-11 flex items-center justify-center font-bold rounded">
+                S
+              </div>            
+              <Link href="/" className='text-3xl font-bold'>
               ShopMart
               <h2 className='text-sm text-[#95BF47] font-medium'>All you want ,right away</h2>
             </Link>
