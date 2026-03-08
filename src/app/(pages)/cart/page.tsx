@@ -37,19 +37,23 @@ export default async function Cart() {
 
           <ClearCart />
 
-          <div className="bg-gray-100 p-4 rounded-xl shadow-sm flex items-center justify-between">
+          <div className="bg-gray-100 p-4 rounded-xl shadow-sm flex flex-col gap-3 md:flex-row items-center justify-between">
             <h2 className="text-2xl font-bold text-gray-800">
               Total: <span className="text-emerald-600">{data.data.totalCartPrice} EGP</span>
             </h2>
-            <h2 className="text-2xl font-bold text-gray-800">
-              <span className="text-emerald-600">{data.numOfCartItems} Items</span>
-            </h2>
-            <Link
-              href="/checkout"
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-xl transition active:scale-95"
-            >
-              Checkout
-            </Link>
+
+            <div className='flex gap-2 items-center'>
+              <h2 className="text-2xl font-bold text-gray-800">
+                <span className="text-emerald-600">{data.numOfCartItems} Items</span>
+              </h2>
+              <Link
+                href="/checkout"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-xl transition active:scale-95"
+              >
+                Checkout
+              </Link>
+            </div>
+
           </div>
 
         </>
