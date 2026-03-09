@@ -22,7 +22,7 @@ export default function RootLayout({
           {/* Navbar */}
           <Navbar />
           {/* Main App */}
-          <div className="container mx-auto pt-30 min-h-screen flex items-center">
+          <div className="container max-w-7xl mx-auto pt-30 min-h-screen flex items-center">
             <Toaster />
             {children}
           </div>

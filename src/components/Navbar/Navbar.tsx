@@ -69,7 +69,7 @@ export default function Navbar() {
   const [toggeler, setToggeler] = useState(false);
   return (<>
     <nav className='shadow-2xl px-4 sm:px-0 py-4 bg-[#111111] fixed start-0 end-0 z-50'>
-      <div className='container mx-auto text-slate-100 rounded-2xl '>
+      <div className='container max-w-7xl mx-auto px-3 text-slate-100 rounded-2xl '>
         {/* Computer & tablet view */}
         <div className="flex justify-between items-center">
 
