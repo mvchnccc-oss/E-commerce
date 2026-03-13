@@ -120,7 +120,7 @@ export default function ProfilePage() {
 
             <div className="bg-gray-50 rounded-xl p-3 text-center shadow-sm">
               <h3 className="text-lg font-semibold text-gray-700">
-                Cart Items
+                Cart
               </h3>
               <p className="text-3xl font-bold text-emerald-600 mt-2">
                 {loading ? "..." : stats.cartCount}
