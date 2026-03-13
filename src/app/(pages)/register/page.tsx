@@ -27,7 +27,6 @@ export default function Register() {
         const city = formData.get("city") as string
         const country = formData.get("country") as string
 
-        // Validate passwords match
         if (password !== rePassword) {
             setError("Passwords do not match")
             toast.error("Passwords do not match")

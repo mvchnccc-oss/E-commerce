@@ -43,7 +43,7 @@ export default function ForgotPassword() {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className="max-w-md mx-auto mt-20 bg-white p-8 rounded-2xl shadow-xl space-y-5"
+            className="max-w-md mx-auto flex flex-col max-h-[35vh] mt-20 bg-white p-8 rounded-2xl shadow-xl space-y-5"
         >
             <h2 className="text-2xl font-bold text-center">Forgot Password</h2>
 

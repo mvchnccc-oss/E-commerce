@@ -74,10 +74,10 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
 
           <div className='flex items-center gap-2'>
- <div className="bg-[#95BF47] text-black text-2xl w-11 h-11 flex items-center justify-center font-bold rounded">
-                S
-              </div>            
-              <Link href="/" className='text-3xl font-bold'>
+            <div className="bg-[#95BF47] text-black text-2xl w-11 h-11 flex items-center justify-center font-bold rounded">
+              S
+            </div>
+            <Link href="/" className='text-3xl font-bold'>
               ShopMart
               <h2 className='text-sm text-[#95BF47] font-medium'>All you want ,right away</h2>
             </Link>
@@ -179,11 +179,11 @@ export default function Navbar() {
             ))
           }
           <div className="flex gap-2 items-center mt-2">
-            <Link href="/favs"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 cursor-pointer duration-500 hover:text-[#95BF47]">
+            <Link onClick={() => setToggeler(false)} href="/favs"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 cursor-pointer duration-500 hover:text-[#95BF47]">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
             </svg>
             </Link>
-            <Link href="/cart" className='relative'>
+            <Link onClick={() => setToggeler(false)} href="/cart" className='relative'>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 cursor-pointer duration-500 hover:text-[#95BF47]">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
               </svg>
@@ -219,23 +219,26 @@ export default function Navbar() {
 
                       {token ? (
                         <>
-                          <Link href="/profile">
+                          <Link onClick={() => setToggeler(false)} href="/profile">
                             <DropdownMenuItem>Profile</DropdownMenuItem>
                           </Link>
 
-                          <Link href="/myOrders">
+                          <Link onClick={() => setToggeler(false)} href="/myOrders">
                             <DropdownMenuItem>My Orders</DropdownMenuItem>
                           </Link>
 
-                          <DropdownMenuItem onClick={handleLogout} className='cursor-pointer'>Logout</DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => {
+                            handleLogout();
+                            setToggeler(false);
+                          }} className='cursor-pointer'>Logout</DropdownMenuItem>
                         </>
                       ) : (
                         <>
-                          <Link href="/login">
+                          <Link onClick={() => setToggeler(false)} href="/login">
                             <DropdownMenuItem>Login</DropdownMenuItem>
                           </Link>
 
-                          <Link href="/register">
+                          <Link onClick={() => setToggeler(false)} href="/register">
                             <DropdownMenuItem>Register</DropdownMenuItem>
                           </Link>
                         </>

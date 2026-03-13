@@ -81,7 +81,6 @@ export default function CheckoutPage() {
           toast.error(data.message || "Checkout failed")
         }
       } else {
-        // Cash on Delivery
         const res = await fetch(
           `https://ecommerce.routemisr.com/api/v1/orders/${cartId}`,
           {

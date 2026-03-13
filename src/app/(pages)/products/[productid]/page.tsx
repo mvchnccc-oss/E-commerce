@@ -33,7 +33,7 @@ export default async function Productdetails({ params }: { params: Params }) {
     const favIds = (Favdata.data || []).map((p: Products) => p._id)
     return (
         <>
-            <div className='container mx-auto mb-5 md:mb-0 py-10 border rounded-none md:rounded-2xl shadow-2xl px-5'>
+            <div className='container flex items-center justify-center mx-auto mb-5 md:mb-0 py-2 border rounded-none md:rounded-2xl shadow-2xl px-5'>
                 <div className="grid md:grid-cols-2 gap-8">
 
                     {/* image slider */}

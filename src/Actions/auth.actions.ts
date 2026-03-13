@@ -110,8 +110,6 @@ export async function registerUser(
 }
 export async function logoutUser() {
   try {
-    // signOut is not needed in Server Action, just clearing the session is done by next-auth automatically
-    // by calling signOut from client
     return {
       success: true,
       message: "Logged out successfully",
